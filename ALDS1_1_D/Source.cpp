@@ -48,6 +48,9 @@ int solve1(const int n, int const* r)
 
 int main()
 {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(0);
+
     int n;
     std::cin >> n;
 
