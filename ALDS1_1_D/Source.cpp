@@ -1,37 +1,14 @@
 #include <iostream>
 #include <algorithm>
 
-constexpr int max_r();
-constexpr int max_size();
-constexpr int min_value();
-int solve0(const int n, int const* r);
-int solve1(const int n, int const* r);
-
-int main()
-{
-    int n;
-    std::cin >> n;
-
-    constexpr int N = max_size();
-    int r[N];
-    for (int i = 0; i < n; ++i) {
-        std::cin >> r[i];
-    }
-
-    const int ret = solve1(n, r);
-    std::cout << ret;
-    
-    return 0;
-}
-
 constexpr int max_r()
 {
-    return 1e+9;
+    return static_cast<int>(1e+9);
 }
 
 constexpr int max_size()
 {
-    return 2e+5;
+    return static_cast<int>(2e+5);
 }
 
 constexpr int min_value()
@@ -67,4 +44,21 @@ int solve1(const int n, int const* r)
         temp_min = std::min(r[i], temp_min);
     }
     return ret;
+}
+
+int main()
+{
+    int n;
+    std::cin >> n;
+
+    constexpr int N = max_size();
+    int r[N];
+    for (int i = 0; i < n; ++i) {
+        std::cin >> r[i];
+    }
+
+    const int ret = solve1(n, r);
+    std::cout << ret;
+    
+    return 0;
 }
