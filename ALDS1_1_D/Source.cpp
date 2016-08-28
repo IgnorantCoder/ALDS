@@ -58,7 +58,7 @@ int main()
     }
 
     const int ret = solve1(n, r);
-    std::cout << ret;
+    std::cout << ret << std::endl;
     
     return 0;
 }
